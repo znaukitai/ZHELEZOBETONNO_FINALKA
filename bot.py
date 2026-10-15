@@ -46,7 +46,7 @@ log = logging.getLogger("mogbot")
 # ==========================================================================
 
 # Secrets and settings come from environment variables (Railway -> Variables).
-BOT_TOKEN = os.getenv("BOT_TOKEN", "PUT_YOUR_BOT_TOKEN_HERE")
+BOT_TOKEN = os.getenv("BOT_TOKEN", "8808641162:AAE4-Pzv6M6LXsVPO2w4kWqv2CDvqGiYELU")
 ADMIN_ID = int(os.getenv("ADMIN_ID", "8206906617"))
 # SQLite file. On Railway attach a Volume: its mount path is picked up automatically,
 # so the data survives redeploys. Or set DB_PATH yourself (e.g. /data/mogbot.db).
@@ -1122,7 +1122,7 @@ async def cb_bc_yes(cb: CallbackQuery, state: FSMContext):
 # ==========================================================================
 
 async def main() -> None:
-    if BOT_TOKEN.startswith("PUT_YOUR"):
+    if BOT_TOKEN.startswith("8808641162:AAE4-Pzv6M6LXsVPO2w4kWqv2CDvqGiYELU"):
         raise SystemExit("Set the BOT_TOKEN environment variable (token from @BotFather).")
 
     await db_init()
